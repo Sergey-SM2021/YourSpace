@@ -1,1 +1,68 @@
 @import const.sass
+
+.intro
+    +bg-img("../assets/intro/backgraund.png")
+    padding: 230px 0
+    color: #fff
+    position: relative
+    @media ( max-width: 1460px )
+        padding: 190px 0 120px 0
+    @media ( max-width: 1100px )
+        padding: 120px 0
+    @media ( max-width: 690px )
+        padding: 100px 0 70px 0
+    &__title
+        font-family: 'Work Sans', sans-serif
+        font-size: 72px
+        font-weight: 800
+        margin: 0 0 20px 0
+        @media ( max-width: 1460px )
+            font-size: 60px
+        @media ( max-width: 690px )
+            margin: 0 0 10px 0
+            text-align: center
+            font-size: 30px
+    &__text
+        font-family: 'Work Sans', sans-serif
+        font-size: 72px
+        font-weight: 400
+        font-size: 22px
+        line-height: 32px
+        margin-bottom: 50px
+        @media ( max-width: 690px )
+            margin-bottom: 25px
+    &__conatiner
+        display: flex
+        justify-content: flex-end
+        width: 100%
+    &__content
+        background-color: #4E4E4E
+        @media ( max-width: 690px )
+            background-color: #4e4e4e57
+        flex: 0 1 45%
+        border-radius: 10px
+        +bb(50px)
+        @media ( max-width: 1460px )
+            flex: 0 1 60%
+            +bb(40px)
+        @media ( max-width: 1100px )
+            flex: 0 1 70%
+            +bb(20px)
+        @media ( max-width: 690px )
+            flex: 0 1 100%
+            +bb(5px)
+
+.social-networks
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center 
+    height: 100%
+    position: absolute
+    top: 0
+    gap: 20px
+    left: 100px
+    @media ( max-width: 1100px )
+        left: 50px
+    @media ( max-width: 690px )
+        display: none
