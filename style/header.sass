@@ -46,6 +46,8 @@
 
 .menu
     &__item
+        position: relative
+        z-index: 5
         white-space: nowrap
         margin: 0 39px 0 0
         font-size: 18px
@@ -57,8 +59,6 @@
         @media ( max-width: 768px )
             margin: 0 0 0 12px
     &__list
-        position: relative
-        z-index: 5
         display: flex
         @media ( max-width: 690px )
             transform: translate(0,-100%)
