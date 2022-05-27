@@ -1,0 +1,105 @@
+@import const.sass
+
+.header
+    &__logo
+        position: relative
+        z-index: 5
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 50
+    padding: 40px 0
+    &::before
+        display: block
+        content: ""
+        background-color: #4E4E4E
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 2
+    @media ( max-width: 768px )
+        padding: 17px 0
+    &__container
+        display: flex
+    &__additional
+        flex: 0 1 400px
+        @extend %flex-end
+    &__additional > *
+        position: relative
+        z-index: 5
+        margin: 0 20px 0 0
+    &__additional img
+        max-width: 30px
+        @media ( max-width: 768px )
+            max-width: 20px
+        &:hover
+            cursor: pointer
+    &__menu
+        flex: 1 1 auto
+        @extend %flex-end
+    &__logo
+        flex: 0 0 auto
+        @extend %flex-start
+
+.menu
+    &__item
+        white-space: nowrap
+        margin: 0 39px 0 0
+        font-size: 18px
+        font-weight: bold
+        font-family: 'PT Serif', serif
+        margin: 0 0 0 39px
+        @media ( max-width: 1100px )
+            margin: 0 0 0 19px
+        @media ( max-width: 768px )
+            margin: 0 0 0 12px
+    &__list
+        position: relative
+        z-index: 5
+        display: flex
+        @media ( max-width: 690px )
+            transform: translate(0,-100%)
+            position: fixed
+            flex-direction: column
+            justify-content: center
+            gap: 20px
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: #344
+            align-items: center
+            transition: 1s
+    &__link
+        color: #fff
+        transition: 1s
+        &:hover
+            color: #4A8780
+
+.active
+    transform: translate(0)
+
+.burger
+    display: none
+    min-width: 30px
+    min-height: 30px
+    flex-direction: column
+    justify-content: space-around
+    @media ( max-width: 690px )
+            display: flex
+    &::before,&::after
+        display: block
+        content: ""
+        width: 100%
+        height: 2px
+        background-color: #fff
+    span
+        display: block
+        width: 100%
+        height: 2px
+        background-color: #fff
+    &:hover
+        cursor: pointer
