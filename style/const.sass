@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Work+Sans:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Work+Sans:wght@400;800&display=swap')
 
 =bg-img($url)
     background-image: url($url)
@@ -37,7 +37,7 @@ li,ul
     margin: 0
     padding: 0
 
-[class*=container]
+[class*=__container]
     +bb(0 15px)
     max-width: 1460px
     margin: 0 auto
@@ -57,3 +57,50 @@ li,ul
         cursor: pointer
         background-color: #487d77
 
+.block-text
+    &__title
+        font-family: 'Work Sans', sans-serif
+        font-weight: 600
+        font-size: 50px
+        color: black
+    &__text
+        color: #5C675A
+        font-family: 'Work Sans', sans-serif
+        font-weight: 400
+        font-size: 20px
+
+.wrapper
+    overflow: hidden
+
+.decor
+    right: 20%
+    position: absolute
+    width: 129px
+    height: 153px
+    @media ( max-width: 1460px )
+        width: 99px
+        height: 123px
+    @media ( max-width: 2200px )
+        right: 10%
+    @media ( max-width: 1700px )
+        right: 5%
+    &__item
+        width: 100%
+        height: 100%
+        position: absolute
+        display: inline-block
+        background-color: #D8E8E7
+        border-radius: 10px
+        opacity: 65%
+    &__item-first
+        top: -10px
+        z-index: 2
+        left: -80%
+    &__item-middle
+        top: 10px
+        z-index: 1
+        background-color: #F4D5B8
+    &__item-last
+        top: -50px
+        z-index: 3
+        right: -80%
