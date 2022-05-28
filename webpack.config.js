@@ -11,7 +11,6 @@ module.exports = {
     plugins: [
         new htmlWebpackPlagin({ template: "./index.html" }), new ccsPlagin()
     ],
-    mode: 'development',
     module: {
         rules: [
             { test: /\.sass$/, use: [ccsPlagin.loader, 'css-loader', 'sass-loader'] },
